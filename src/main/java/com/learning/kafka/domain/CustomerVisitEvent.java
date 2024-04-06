@@ -17,6 +17,4 @@ public class CustomerVisitEvent {
 
     private LocalDateTime dateTime;
 
-
-
 }
