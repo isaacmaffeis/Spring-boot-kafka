@@ -30,10 +30,4 @@ public class SpringBootKafkaApplication {
         };
     }
 
-    @KafkaListener(topics = "customer.visit")
-    public String listens(final String in) {
-        log.info("Consumed: " + in);
-        return in;
-    }
-
 }
