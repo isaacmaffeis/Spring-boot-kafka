@@ -35,3 +35,14 @@ following dependencies:
   <artifactId>jackson-datatype-jsr310</artifactId>
 </dependency>
 ```
+
+## Model mapper Dependencies
+In order to use the model mapper module for implementing the mappers, use the
+following dependency:
+```xml
+<dependency>
+    <groupId>org.modelmapper</groupId>
+    <artifactId>modelmapper</artifactId>
+    <version>3.0.0</version>
+</dependency>
+```

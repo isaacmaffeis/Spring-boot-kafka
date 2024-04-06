@@ -3,7 +3,7 @@ package com.learning.kafka.infrastructure.messageBroker;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.learning.kafka.config.KafkaConfigProps;
-import com.learning.kafka.domain.CustomerVisitEvent;
+import com.learning.kafka.domain.entities.CustomerVisitEventEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -32,12 +32,19 @@ public class Producer {
     }
 
     public void SendDefaultMessage() throws JsonProcessingException {
-        final CustomerVisitEvent event = CustomerVisitEvent.builder()
+        final CustomerVisitEventEntity event = CustomerVisitEventEntity.builder()
                 .customerId(UUID.randomUUID().toString())
                 .dateTime(LocalDateTime.now())
                 .build();
 
         final String payload = objectMapper.writeValueAsString(event);
+
+        kafkaTemplate.send(kafkaConfigProps.getTopic(), payload);
+    }
+
+    public void sendMessage(CustomerVisitEventEntity customerVisitEventEntity) throws JsonProcessingException {
+
+        final String payload = objectMapper.writeValueAsString(customerVisitEventEntity);
 
         kafkaTemplate.send(kafkaConfigProps.getTopic(), payload);
     }
