@@ -54,7 +54,9 @@ docker exec --interactive --tty broker kafka-console-consumer --bootstrap-server
 docker exec --interactive --tty broker kafka-console-producer --bootstrap-server broker:9092 --topic "customer.visit"
 ```
 
-## Jackson Dependencies
+## Dependencies
+
+### Jackson
 In order to use Jackson and the module for Java8 DateTimes, use the
 following dependencies:
 ```xml
@@ -68,7 +70,7 @@ following dependencies:
 </dependency>
 ```
 
-## Model mapper Dependencies
+### Model Mapper
 In order to use the model mapper module for implementing the mappers, use the
 following dependency:
 ```xml
