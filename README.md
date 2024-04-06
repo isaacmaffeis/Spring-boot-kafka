@@ -1,7 +1,39 @@
-🔗 Kafka Docker Compose Quickstart: https://developer.confluent.io/quickstart/kafka-local/
+## How to Start the application
+Open Docker Desktop, go to the root directory of the project in the terminal and in order to run the containers of Kafka and Zookeeper digit:
+```shell
+docker compose up
+```
+run the project using any IDE or use maven with the following instruction:
+```shell
+mvn clean install
+mvn spring-boot:run
+```
+use [Postman](https://web.postman.co//) to test the API, some examples:
+```http request
+POST /visit HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Content-Length: 49
+
+{
+    "customerId":null,
+    "dateTime":null
+}
+``` 
+```http request
+POST /visit HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Content-Length: 108
+
+{
+    "customerId":"webID001-bf3c-4b21-8ea4-8bcc99a634d4",
+    "dateTime":"2024-04-06T17:36:55.1313334"
+}
+```
 
 ## Kafka Basics
-
+🔗 Kafka Docker Compose Quickstart: https://developer.confluent.io/quickstart/kafka-local/
 ### Create and start containers
 ```shell
 docker compose up
