@@ -61,7 +61,8 @@ brokers, topics, partitions, consumers, and lets you view messages.
 
 Open a browser and navigate to http://localhost:9000.
 
-![KafdropImage](..%2F..%2F..%2FPictures%2FScreenshots%2FScreenshot%202024-04-08%20103550.png)
+![KafdropImage](https://github.com/isaacmaffeis/Spring-boot-kafka/assets/28917454/94357957-898a-49c8-b045-87cf59876d62))
+
 ## Dependencies
 
 ### Jackson
