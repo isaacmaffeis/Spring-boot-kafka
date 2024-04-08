@@ -54,6 +54,13 @@ docker exec --interactive --tty broker kafka-console-consumer --bootstrap-server
 docker exec --interactive --tty broker kafka-console-producer --bootstrap-server broker:9092 --topic "customer.visit"
 ```
 
+## Kafka Web UI
+[Kafdrop](https://github.com/obsidiandynamics/kafdrop) is a web UI for viewing Kafka topics and browsing consumer groups. The tool displays information such as 
+brokers, topics, partitions, consumers, and lets you view messages.
+
+
+Open a browser and navigate to http://localhost:9000.
+
 ## Dependencies
 
 ### Jackson
