@@ -21,9 +21,6 @@ public class CustomerVisitService implements CustomerService {
         this.producer = producer;
     }
 
-    public void CreateDefaultVisit() throws JsonProcessingException {
-        producer.SendDefaultMessage();
-    }
 
     @Override
     public CustomerVisitEventEntity save(CustomerVisitEventEntity customerVisitEventEntity) {

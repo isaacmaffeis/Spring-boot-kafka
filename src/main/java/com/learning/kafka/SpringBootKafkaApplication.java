@@ -13,11 +13,4 @@ public class SpringBootKafkaApplication {
 
     public static void main(String[] args) {SpringApplication.run(SpringBootKafkaApplication.class, args);}
 
-    @Bean
-    public ApplicationRunner runner(final Producer producer) {
-        return args -> {
-            producer.SendDefaultMessage();
-        };
-    }
-
 }
